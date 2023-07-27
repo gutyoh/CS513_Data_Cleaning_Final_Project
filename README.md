@@ -62,6 +62,8 @@ suitability for analysis.
     <img src="images/YW_OpenRefine_operations_diagram.png">
 </div>
 
+Due to its large size, the above YesWorkflow diagram is difficult to visualize correctly, so you can view it in a larger size in the following URL: https://raw.githubusercontent.com/gutyoh/CS513_Data_Cleaning_Final_Project/master/images/YW_OpenRefine_operations_diagram.png
+
 
 2. **[Python Data Cleaning Steps](scripts/notebooks/clean_PPP_dataset.ipynb)**: The cleaned data was further processed
    using Python to remove duplicates, rectify
