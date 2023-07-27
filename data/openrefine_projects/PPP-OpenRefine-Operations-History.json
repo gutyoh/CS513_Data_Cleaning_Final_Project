@@ -1,0 +1,1388 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LoanAmount",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LoanAmount using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column City using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column State using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NAICSCode",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NAICSCode using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BusinessType",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BusinessType using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "RaceEthnicity",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column RaceEthnicity using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Gender",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Gender using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Veteran",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Veteran using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NonProfit",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NonProfit using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobsReported",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column JobsReported using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DateApproved",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DateApproved using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Lender",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Lender using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "CD",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column CD using expression value.trim()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KAILUA KONA",
+          "Kailua Kona",
+          "Kailua kona",
+          "kailua kona",
+          "Kailua Kona,",
+          "Kailua KOna"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA-KONA"
+      },
+      {
+        "from": [
+          "Kailua-Kona",
+          "KAILUA-KONA",
+          "kailua-kona",
+          "Kailua-kona",
+          "KAILUAKONA",
+          "kailuakona"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA-KONA"
+      },
+      {
+        "from": [
+          "PEARL CITY",
+          "Pearl City",
+          "Pearl city",
+          "PEARL CITY City",
+          "pearl city"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEARL CITY"
+      },
+      {
+        "from": [
+          "HONOLULU",
+          "Honolulu",
+          "honolulu",
+          "Honolulu,",
+          "HOnolulu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "MAKAWAO",
+          "Makawao",
+          "makawao",
+          "MAKAWAO,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAKAWAO"
+      },
+      {
+        "from": [
+          "EWA BEACH",
+          "Ewa Beach",
+          "ewa beach",
+          "Ewa beach"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "EWA BEACH"
+      },
+      {
+        "from": [
+          "PAPAIKOU",
+          "Papa'ikou",
+          "Papaikou",
+          "papaikou"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAPAIKOU"
+      },
+      {
+        "from": [
+          "KAPAA",
+          "Kapaa",
+          "kapaa",
+          "Kapa'a"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAPAA"
+      },
+      {
+        "from": [
+          "HILO",
+          "Hilo",
+          "hilo",
+          "HIlo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HILO"
+      },
+      {
+        "from": [
+          "WAILUKU",
+          "Wailuku",
+          "wailuku",
+          "WAiluku"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAILUKU"
+      },
+      {
+        "from": [
+          "HONOKAA",
+          "Honokaa",
+          "HONOKA'A",
+          "honokaa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOKAA"
+      },
+      {
+        "from": [
+          "KANEOHE",
+          "Kaneohe",
+          "kaneohe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KANEOHE"
+      },
+      {
+        "from": [
+          "KAPOLEI",
+          "Kapolei",
+          "kapolei"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAPOLEI"
+      },
+      {
+        "from": [
+          "KALAHEO",
+          "Kalaheo",
+          "kalaheo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KALAHEO"
+      },
+      {
+        "from": [
+          "KILAUEA",
+          "Kilauea",
+          "kilauea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KILAUEA"
+      },
+      {
+        "from": [
+          "HAIKU",
+          "Haiku",
+          "haiku"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAIKU"
+      },
+      {
+        "from": [
+          "CAPTAIN COOK",
+          "Captain Cook",
+          "Captain cook"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAPTAIN COOK"
+      },
+      {
+        "from": [
+          "KAUNAKAKAI",
+          "Kaunakakai",
+          "kaunakakai"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAUNAKAKAI"
+      },
+      {
+        "from": [
+          "HOLUALOA",
+          "Holualoa",
+          "holualoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HOLUALOA"
+      },
+      {
+        "from": [
+          "Hon",
+          "Hon.",
+          "hon."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hon"
+      },
+      {
+        "from": [
+          "Hoolehua",
+          "HOOLEHUA",
+          "Ho'olehua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hoolehua"
+      },
+      {
+        "from": [
+          "KOLOA",
+          "Koloa",
+          "koloa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KOLOA"
+      },
+      {
+        "from": [
+          "KAILUA",
+          "Kailua",
+          "kailua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA"
+      },
+      {
+        "from": [
+          "LAHAINA",
+          "Lahaina",
+          "lahaina"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAHAINA"
+      },
+      {
+        "from": [
+          "KULA",
+          "Kula",
+          "kula"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KULA"
+      },
+      {
+        "from": [
+          "HANALEI",
+          "Hanalei",
+          "hanalei"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HANALEI"
+      },
+      {
+        "from": [
+          "LIHUE",
+          "Lihue",
+          "lihue"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LIHUE"
+      },
+      {
+        "from": [
+          "Lanai City",
+          "LANAI CITY",
+          "Lanai City,"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LANAI CITY"
+      },
+      {
+        "from": [
+          "KAHULUI",
+          "Kahului",
+          "kahului"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAHULUI"
+      },
+      {
+        "from": [
+          "WAIPAHU",
+          "Waipahu",
+          "waipahu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIPAHU"
+      },
+      {
+        "from": [
+          "KEALAKEKUA",
+          "Kealakekua",
+          "kealakekua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEALAKEKUA"
+      },
+      {
+        "from": [
+          "NAALEHU",
+          "Naalehu",
+          "Na'alehu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NAALEHU"
+      },
+      {
+        "from": [
+          "KAMUELA",
+          "Kamuela",
+          "kamuela"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAMUELA"
+      },
+      {
+        "from": [
+          "Honlulu",
+          "HONLULU",
+          "honlulu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "WAIMANALO",
+          "Waimanalo",
+          "waimanalo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIMANALO"
+      },
+      {
+        "from": [
+          "WAHIAWA",
+          "Wahiawa",
+          "wahiawa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAHIAWA"
+      },
+      {
+        "from": [
+          "Papaaloa",
+          "PAPAALOA",
+          "papaaloa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAPAALOA"
+      },
+      {
+        "from": [
+          "WAIALUA",
+          "Waialua",
+          "waialua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIALUA"
+      },
+      {
+        "from": [
+          "AIEA",
+          "Aiea",
+          "aiea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AIEA"
+      },
+      {
+        "from": [
+          "WAIANAE",
+          "Waianae",
+          "waianae"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIANAE"
+      },
+      {
+        "from": [
+          "WAIKOLOA",
+          "Waikoloa",
+          "waikoloa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIKOLOA"
+      },
+      {
+        "from": [
+          "KIHEI",
+          "Kihei",
+          "kihei"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KIHEI"
+      },
+      {
+        "from": [
+          "PAIA",
+          "Paia",
+          "paia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAIA"
+      },
+      {
+        "from": [
+          "LAUPAHOEHOE",
+          "Laupahoehoe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAUPAHOEHOE"
+      },
+      {
+        "from": [
+          "MOUNTAIN VIEW",
+          "Mountain View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOUNTAIN VIEW"
+      },
+      {
+        "from": [
+          "PRINCEVILLE",
+          "Princeville"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PRINCEVILLE"
+      },
+      {
+        "from": [
+          "Waimea",
+          "WAIMEA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Waimea"
+      },
+      {
+        "from": [
+          "HONAUNAU",
+          "Honaunau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONAUNAU"
+      },
+      {
+        "from": [
+          "HONOLULUlulu",
+          "HONOLULULULU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "KAPAAU",
+          "Kapaau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAPAAU"
+      },
+      {
+        "from": [
+          "MILILANI",
+          "Mililani"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MILILANI"
+      },
+      {
+        "from": [
+          "AIEAEA",
+          "AIEAea"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AIEAEA"
+      },
+      {
+        "from": [
+          "HAKALAU",
+          "Hakalau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAKALAU"
+      },
+      {
+        "from": [
+          "Honoluu",
+          "Honolu.u"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "ELEELE",
+          "Eleele"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ELEELE"
+      },
+      {
+        "from": [
+          "KUNIA",
+          "Kunia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KUNIA"
+      },
+      {
+        "from": [
+          "PEPEEKEO",
+          "Pepeekeo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEPEEKEO"
+      },
+      {
+        "from": [
+          "Wailea",
+          "WAILEA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAILEA"
+      },
+      {
+        "from": [
+          "LAWAI",
+          "Lawai"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAWAI"
+      },
+      {
+        "from": [
+          "Pukalani",
+          "PUKALANI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PUKALANI"
+      },
+      {
+        "from": [
+          "KUALAPUU",
+          "Kualapuu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KUALAPUU"
+      },
+      {
+        "from": [
+          "VOLCANO",
+          "Volcano"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "VOLCANO"
+      },
+      {
+        "from": [
+          "KAAAWA",
+          "Kaaawa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAAAWA"
+      },
+      {
+        "from": [
+          "HANA",
+          "Hana"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HANA"
+      },
+      {
+        "from": [
+          "LAIE",
+          "Laie"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAIE"
+      },
+      {
+        "from": [
+          "KAPOLEIpolei",
+          "KAPOLEIPOLEI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAPOLEI"
+      },
+      {
+        "from": [
+          "PEARL HARBOR",
+          "Pearl Harbor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PEARL HARBOR"
+      },
+      {
+        "from": [
+          "PAAUILO",
+          "Paauilo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAAUILO"
+      },
+      {
+        "from": [
+          "KAUMAKANI",
+          "Kaumakani"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAUMAKANI"
+      },
+      {
+        "from": [
+          "HONOMU",
+          "Honomu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOMU"
+      },
+      {
+        "from": [
+          "KEKAHA",
+          "Kekaha"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEKAHA"
+      },
+      {
+        "from": [
+          "NINOLE",
+          "Ninole"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NINOLE"
+      },
+      {
+        "from": [
+          "HAUULA",
+          "Hauula"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAUULA"
+      },
+      {
+        "from": [
+          "KEALIA",
+          "Kealia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEALIA"
+      },
+      {
+        "from": [
+          "KAHUKU",
+          "Kahuku"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAHUKU"
+      },
+      {
+        "from": [
+          "OCEAN VIEW",
+          "Ocean View"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OCEAN VIEW"
+      },
+      {
+        "from": [
+          "KURTISTOWN",
+          "Kurtistown"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KURTISTOWN"
+      },
+      {
+        "from": [
+          "KEAUHOU",
+          "Keauhou"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEAUHOU"
+      },
+      {
+        "from": [
+          "KEAAU",
+          "Keaau"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEAAU"
+      },
+      {
+        "from": [
+          "HALEIWA",
+          "Haleiwa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HALEIWA"
+      },
+      {
+        "from": [
+          "PUUNENE",
+          "Puunene"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PUUNENE"
+      },
+      {
+        "from": [
+          "HAWI",
+          "Hawi"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAWI"
+      },
+      {
+        "from": [
+          "Waikoloa Village",
+          "WAIKOLOA VILLAGE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIKOLOA VILLAGE"
+      },
+      {
+        "from": [
+          "HONOULULU",
+          "Honoululu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOULULU"
+      },
+      {
+        "from": [
+          "HANAPEPE",
+          "Hanapepe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HANAPEPE"
+      },
+      {
+        "from": [
+          "ANAHOLA",
+          "Anahola"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ANAHOLA"
+      },
+      {
+        "from": [
+          "Honolulu, HI",
+          "HONOLULU, HI"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "PAHOA",
+          "Pahoa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PAHOA"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "HONOLULUu",
+          "HONOLULUulu",
+          "Honoluulu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "HONOULULU",
+          "Honoulu",
+          "honoulul"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOULULU"
+      },
+      {
+        "from": [
+          "MILILANI",
+          "MILILANIlani"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MILILANI"
+      },
+      {
+        "from": [
+          "KEALAKEKUA",
+          "KEALAKEKUAkua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KEALAKEKUA"
+      },
+      {
+        "from": [
+          "HONOLULU",
+          "HONOLULUlu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "MAKAWAOakawao",
+          "MAKAWAOawao"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAKAWAO"
+      },
+      {
+        "from": [
+          "HONOLULUolulu",
+          "HONOLULUonolulu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "OCEAN VIEW",
+          "Oceanview"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OCEAN VIEW"
+      },
+      {
+        "from": [
+          "KAILUA KONAa",
+          "KAILUA KONAa Kona"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA-KONA"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LAHAINA",
+          "Lahaina HI",
+          "Lahana",
+          "Lahania",
+          "Lahina",
+          "lahiana"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAHAINA"
+      },
+      {
+        "from": [
+          "KAILUA-KONA",
+          "Kaialu Kona",
+          "Kailu Kona",
+          "Kailua-kona 96740",
+          "Kaulua Kona",
+          "kialua-kona"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA-KONA"
+      },
+      {
+        "from": [
+          "HONOLULU",
+          "HONOULULU",
+          "honoluliu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOLULU"
+      },
+      {
+        "from": [
+          "KAPOLEI",
+          "KAPOLEIei",
+          "Kapelei"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAPOLEI"
+      },
+      {
+        "from": [
+          "KAHULUI",
+          "KAHALA",
+          "KAHULUIui"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAHULUI"
+      },
+      {
+        "from": [
+          "HAIKU",
+          "Haikua"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HAIKU"
+      },
+      {
+        "from": [
+          "HONOKAA",
+          "Honkaa"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HONOKAA"
+      },
+      {
+        "from": [
+          "WAIPAHUAIPAHU",
+          "WAIPAHUipahu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIPAHU"
+      },
+      {
+        "from": [
+          "KAILUA KONAna",
+          "KAILUA KONAona"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAILUA-KONA"
+      },
+      {
+        "from": [
+          "KAUNAKAKAI",
+          "Kaunkakai"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KAUNAKAKAI"
+      },
+      {
+        "from": [
+          "AIEA",
+          "AIEAEA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AIEA"
+      },
+      {
+        "from": [
+          "KANEOHE",
+          "KANEOHEe"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KANEOHE"
+      },
+      {
+        "from": [
+          "MAKAWAO",
+          "MAKWAO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAKAWAO"
+      },
+      {
+        "from": [
+          "CAPTAIN COOK",
+          "Capatain Cook"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAPTAIN COOK"
+      },
+      {
+        "from": [
+          "WAIMANALO",
+          "Waiamanalo"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIMANALO"
+      },
+      {
+        "from": [
+          "WAIPAHU",
+          "WAIPAHUu"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAIPAHU"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BusinessType",
+    "expression": "grel:value.replace('Limited  Liability Company(LLC)', 'Limited Liability Company')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BusinessType using expression grel:value.replace('Limited  Liability Company(LLC)', 'Limited Liability Company')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "BusinessType",
+    "expression": "grel:value.replace('Employee Stock Ownership Plan(ESOP)', 'Employee Stock Ownership Plan')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column BusinessType using expression grel:value.replace('Employee Stock Ownership Plan(ESOP)', 'Employee Stock Ownership Plan')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NonProfit",
+    "expression": "jython:return 'True' if value == 'Y' else value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NonProfit using expression jython:return 'True' if value == 'Y' else value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "NonProfit",
+    "expression": "jython:return 'False' if value is None else value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column NonProfit using expression jython:return 'False' if value is None else value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "LoanAmount",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column LoanAmount using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "JobsReported",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column JobsReported using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DateApproved",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DateApproved using expression value.toDate()"
+  }
+]
