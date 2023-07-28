@@ -1,0 +1,58 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Outer_Workflow_PPP_Data_Cleaning_Process
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+OpenRefine_Cleaning
+Python_Cleaning
+Python_Data_Loading_Into_SQLite_DB
+
+/* Style for nodes representing composite programs (sub-workflows) in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=2 fontname=Helvetica]
+
+/* Nodes representing composite programs (sub-workflows) in workflow */
+Domain_Constraint_Checks
+Referential_Integrity_Checks
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+PPP_Data_up_to_150k_080820_HI_OpenRefineCleaned_csv [shape=record rankdir=LR label="{<f0> PPP_Data_up_to_150k_080820_HI_OpenRefineCleaned_csv |<f1> file\:PPP_Data_up_to_150k_080820_HI_OpenRefineCleaned.csv}"];
+PPP_Data_up_to_150k_080820_HI_OpenRefine_PythonCleaned_csv
+PPP_db [shape=record rankdir=LR label="{<f0> PPP_db |<f1> file\:PPP.db}"];
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+OpenRefine_Cleaning -> PPP_Data_up_to_150k_080820_HI_OpenRefineCleaned_csv
+PPP_Data_up_to_150k_080820_HI_csv -> OpenRefine_Cleaning
+Python_Cleaning -> PPP_Data_up_to_150k_080820_HI_OpenRefine_PythonCleaned_csv
+PPP_Data_up_to_150k_080820_HI_OpenRefineCleaned_csv -> Python_Cleaning
+Domain_Constraint_Checks -> PPP_Data_up_to_150k_080820_HI_OpenRefine_PythonCleaned_csv
+PPP_Data_up_to_150k_080820_HI_OpenRefine_PythonCleaned_csv -> Domain_Constraint_Checks
+Python_Data_Loading_Into_SQLite_DB -> PPP_db
+PPP_Data_up_to_150k_080820_HI_OpenRefine_PythonCleaned_csv -> Python_Data_Loading_Into_SQLite_DB
+Referential_Integrity_Checks -> PPP_db
+PPP_db -> Referential_Integrity_Checks
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* End of top-level graph */
+}

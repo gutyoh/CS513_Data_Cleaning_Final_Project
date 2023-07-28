@@ -1,0 +1,125 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=Load_Data_Into_SQLite_DB_Process
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+LoadCleanedDataset
+CreateSQLiteDB
+CreateTableAddresses
+CreateTableDemographics
+CreateTableBusinessTypes
+CreateTableIndustries
+CreateTableLoans
+CreateAddressesDataFrame
+CreateDemographicsDataFrame
+CreateBusinessTypesDataFrame
+CreateIndustriesDataFrame
+InsertIntoAddressesTable
+InsertIntoDemographicsTable
+InsertIntoBusinessTypesTable
+InsertIntoIndustriesTable
+InsertIntoLoansTable
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+PPP_db
+"PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv" [shape=record rankdir=LR label="{<f0> PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv |<f1> file\:PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned.csv}"];
+cleaned_dataframe
+addresses_dataframe
+Addresses_table
+demographics_dataframe
+Demographics_table
+businessTypes_dataframe
+BusinessTypes_table
+industries_dataframe
+Industries_table
+populated_Addresses_table
+populated_Demographics_table
+populated_BusinessTypes_table
+populated_Industries_table
+Loans_table
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+LoadCleanedDataset -> cleaned_dataframe
+"PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv" -> LoadCleanedDataset
+CreateSQLiteDB -> PPP_db
+CreateTableAddresses -> Addresses_table
+PPP_db -> CreateTableAddresses
+CreateTableDemographics -> Demographics_table
+PPP_db -> CreateTableDemographics
+CreateTableBusinessTypes -> BusinessTypes_table
+PPP_db -> CreateTableBusinessTypes
+CreateTableIndustries -> Industries_table
+PPP_db -> CreateTableIndustries
+CreateTableLoans -> Loans_table
+PPP_db -> CreateTableLoans
+CreateAddressesDataFrame -> addresses_dataframe
+cleaned_dataframe -> CreateAddressesDataFrame
+CreateDemographicsDataFrame -> demographics_dataframe
+cleaned_dataframe -> CreateDemographicsDataFrame
+CreateBusinessTypesDataFrame -> businessTypes_dataframe
+cleaned_dataframe -> CreateBusinessTypesDataFrame
+CreateIndustriesDataFrame -> industries_dataframe
+cleaned_dataframe -> CreateIndustriesDataFrame
+InsertIntoAddressesTable -> populated_Addresses_table
+addresses_dataframe -> InsertIntoAddressesTable
+Addresses_table -> InsertIntoAddressesTable
+InsertIntoDemographicsTable -> populated_Demographics_table
+demographics_dataframe -> InsertIntoDemographicsTable
+Demographics_table -> InsertIntoDemographicsTable
+InsertIntoBusinessTypesTable -> populated_BusinessTypes_table
+businessTypes_dataframe -> InsertIntoBusinessTypesTable
+BusinessTypes_table -> InsertIntoBusinessTypesTable
+InsertIntoIndustriesTable -> populated_Industries_table
+industries_dataframe -> InsertIntoIndustriesTable
+Industries_table -> InsertIntoIndustriesTable
+InsertIntoLoansTable -> populated_Loans_table
+cleaned_dataframe -> InsertIntoLoansTable
+populated_Addresses_table -> InsertIntoLoansTable
+populated_Demographics_table -> InsertIntoLoansTable
+populated_BusinessTypes_table -> InsertIntoLoansTable
+populated_Industries_table -> InsertIntoLoansTable
+Loans_table -> InsertIntoLoansTable
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+"PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv_input_port" [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+PPP_db_output_port [label=""]
+
+/* Edges from input ports to channels */
+"PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv_input_port" -> "PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned_csv"
+
+/* Edges from channels to output ports */
+PPP_db -> PPP_db_output_port
+
+/* End of top-level graph */
+}
