@@ -13,42 +13,50 @@ suitability for analysis.
 
 ```bash
 .
-├── .gitignore
-├── data
-│ ├── initial
-│ │ └── PPP Data up to 150k 080820 HI.csv
-│ ├── cleaned
-│ │ ├── PPP-Data-up-to-150k-080820-HI-OpenRefineCleaned.csv
-│ │ └── PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned.csv
-│ ├── external
-│ │ └── industry-titles.csv
-│ ├── database
-│ │ └── PPP.db
-│ └── openrefine_projects
-│ │ └──  PPP-Data-up-to-150k-080820-HI-csv.openrefine.tar.gz
-│ │ └──  PPP-OpenRefine-Operations-History.json
-│ └── DataLinks.txt
-├── scripts
-│ ├── notebooks
-│ │ ├── clean_PPP_dataset.ipynb
-│ │ ├── domain_constraint_checks.ipynb
-│ │ └── load_PPP_data_into_db.ipynb
-│ ├── python_scripts
-│ │ └── main_use_case_u1_visualization.py
-│ └── yesworkflow_scripts
-│ ├── YW_clean_ppp_dataset.py
-│ ├── YW_load_data_into_db.py
-│ └── YW_outer_workflow_PPP_data_cleaning_process.py
-├── images
-│ ├── YW_clean_PPP_dataset_diagram.png
-│ ├── YW_load_data_into_db_diagram.png
-│ ├── YW_OpenRefine_operations_diagram.png
-│ └── top_10_cities_by_total_ppp_loan_amount.png
 ├── CS513_Data_Cleaning_Final_Project_Phase-1_Report.pdf
 ├── CS513_Data_Cleaning_Final_Project_Phase-2_Report.pdf
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── data
+│   ├── DataLinks.txt
+│   ├── cleaned
+│   │   ├── PPP-Data-up-to-150k-080820-HI-OpenRefine-PythonCleaned.csv
+│   │   └── PPP-Data-up-to-150k-080820-HI-OpenRefineCleaned.csv
+│   ├── database
+│   │   └── PPP.db
+│   ├── external
+│   │   └── industry-titles.csv
+│   ├── initial
+│   │   └── PPP Data up to 150k 080820 HI.csv
+│   └── openrefine_projects
+│       ├── PPP-Data-up-to-150k-080820-HI-csv.openrefine.tar.gz
+│       └── PPP-OpenRefine-Operations-History.json
+├── images
+│   ├── YW_OpenRefine_operations_diagram.pdf
+│   ├── YW_OpenRefine_operations_diagram.png
+│   ├── YW_clean_PPP_dataset_diagram.pdf
+│   ├── YW_clean_PPP_dataset_diagram.png
+│   ├── YW_load_data_into_db_diagram.pdf
+│   ├── YW_load_data_into_db_diagram.png
+│   ├── YW_outer_workflow_PPP_data_cleaning_process_diagram.pdf
+│   ├── YW_outer_workflow_PPP_data_cleaning_process_diagram.png
+│   └── top_10_cities_by_total_ppp_loan_amount.png
+├── requirements.txt
+├── scripts
+│   ├── notebooks
+│   │   ├── clean_PPP_dataset.ipynb
+│   │   ├── domain_constraint_checks.ipynb
+│   │   ├── load_PPP_data_into_db.ipynb
+│   │   └── referential_integrity_checks.ipynb
+│   └── python_scripts
+│       └── main_use_case_u1_visualization.py
+└── yw_models
+    ├── YW_clean_PPP_dataset.gv
+    ├── YW_clean_PPP_dataset.yw
+    ├── YW_load_data_into_db.gv
+    ├── YW_load_data_into_db.yw
+    ├── YW_outer_workflow_PPP_data_cleaning_process.gv
+    └── YW_outer_workflow_PPP_data_cleaning_process.yw
 ```
 
 ---
