@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project aims to clean and analyze the **[Paycheck Protection Program (PPP) dataset](data/initial/PPP Data up to 150k 080820 HI.csv)**, with the primary use case being to
+This project aims to clean and analyze the **[Paycheck Protection Program (PPP) dataset](data/initial/PPP%20Data%20up%20to%20150k%20080820%20HI.csv)**, with the primary use case being to
 identify the cities that received the highest total amount in PPP loans. The data cleaning process was executed in
 multiple steps using tools like OpenRefine, Python, and SQLite, improving the data quality and ensuring its
 suitability for analysis.
